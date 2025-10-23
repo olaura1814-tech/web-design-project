@@ -1,0 +1,358 @@
+/* Reset and basic styles */
+section{
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#topMenu a.active {
+  opacity: 1;
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+}
+* {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  /* Header */
+  #headerContent {
+    text-align: center;
+    padding: 20px;
+    background-color: grey;
+    color: black;
+  }
+  #headerContent h1 {
+    background-color: aqua;
+    padding: 10px;
+    margin: 0;
+  }
+  #headerContent p {
+    font-style: italic;
+    font-size: larger;
+  }
+   /* Scroll Progress Bar */
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;              /* thin bar */
+  background: grey;          /* color of the bar */
+  width: 0%;                 /* starts empty */
+  z-index: 300;              /* above nav */
+  transition: width 0.1s linear;
+}
+  /* Navigation */
+  #topMenu {
+    background-color: aqua;
+    padding: 10px;
+    font-size: 1.2em;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  #topMenu a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    margin: 0 5px;
+  }
+  #topMenu a:hover {
+    background-color: grey;
+  }
+  
+  /* Main Content Sections */
+  main section {
+    padding: 40px 20px;
+  }
+  
+  /* Banner Image Section */
+  #bannerImage {
+    background-image: url('WhatsApp Image 2025-10-21 at 13.43.51.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 180vh; /* fill the viewport height */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  .banner-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 8px;
+  }
+  #bannerImage h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  #bannerImage p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  #bannerImage button {
+    font-size: 1em;
+    padding: 10px 20px;
+    background-color: aqua;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  #bannerImage button:hover {
+    background-color: grey;
+  }
+  
+  /* Content Wrapper for Sections */
+  .content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* About Section */
+#About {
+  background-image: url('WhatsApp Image 2025-10-21 at 13.44.54.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  min-height: 250vh;          /* fill the viewport height */
+  display: flex;
+  justify-content: center;    /* center horizontally */
+  align-items: flex-end;      /* push content to bottom */
+  padding: 40px 20px;         /* breathing room at bottom + sides */
+}
+
+#About > div {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+  margin-bottom: 20px;        /* extra gap above bottom edge */
+}
+  
+  /* Services Section */
+  #services ul {
+    list-style: none;
+    padding: 0;
+  }
+  #services li {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  /* Contacts Section */
+  #contacts form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  #contacts input, #contacts textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  #contacts button {
+    padding: 10px;
+    font-size: 1em;
+    background-color: aqua;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #contacts button:hover {
+    background-color: grey;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: aqua;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    #bannerImage {
+      height: 500px;
+    }
+    #bannerImage h2 {
+      font-size: 2em;
+    }
+    #bannerImage p {
+      font-size: 1em;
+    }
+  }
+#progressBar {
+  opacity: 0;
+  transition: width 0.1s linear, opacity 0.3s ease;
+}
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #181818;   /* softer dark background */
+  color: #e0e0e0;              /* light text */
+}
+
+/* Header */
+body.dark-mode #headerContent {
+  background-color: #222;
+  color: #f0f0f0;
+}
+body.dark-mode #headerContent h1 {
+  background-color: #333;
+  color: #f0f0f0;
+}
+body.dark-mode #headerContent p {
+  color: #ccc;
+}
+
+/* Navigation */
+body.dark-mode #topMenu {
+  background-color: #222;
+}
+body.dark-mode #topMenu a {
+  color: #f0f0f0;
+}
+body.dark-mode #topMenu a:hover {
+  background-color: #333;
+}
+
+/* Banner */
+body.dark-mode #bannerImage {
+  color: #f0f0f0;
+}
+body.dark-mode .banner-content {
+  background: rgba(0, 0, 0, 0.7);
+}
+body.dark-mode #bannerImage button {
+  background-color: #444;
+  color: #f0f0f0;
+}
+body.dark-mode #bannerImage button:hover {
+  background-color: #666;
+}
+
+/* About Section */
+body.dark-mode #About {
+  background-color: #111; /* fallback if image is dark */
+}
+body.dark-mode #About > div {
+  background: #242424;
+  color: #f0f0f0;
+}
+
+/* Services Section */
+body.dark-mode #services {
+  background-color: #1e1e1e;
+}
+body.dark-mode #services li {
+  color: #ddd;
+}
+
+/* Contacts Section */
+body.dark-mode #contacts {
+  background-color: #1e1e1e;
+}
+body.dark-mode #contacts input,
+body.dark-mode #contacts textarea {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border: 1px solid #444;
+}
+body.dark-mode #contacts button {
+  background-color: #444;
+  color: #f0f0f0;
+}
+body.dark-mode #contacts button:hover {
+  background-color: #666;
+}
+
+/* Footer */
+body.dark-mode footer {
+  background-color: #222;
+  color: #f0f0f0;
+}
+/* Toggle Switch */
+.theme-switch {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  z-index: 300; /* above nav */
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "🌙";              /* default icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+
+input:checked + .slider {
+  background-color: aqua;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+  content: "☀️";              /* sun icon when checked */
+}
+/* Smooth transition for theme changes */
+body, 
+#headerContent, 
+#topMenu, 
+#bannerImage, 
+#About > div, 
+#services, 
+#contacts, 
+footer, 
+#contacts input, 
+#contacts textarea, 
+#contacts button, 
+#bannerImage button {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
